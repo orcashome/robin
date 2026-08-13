@@ -1,0 +1,32 @@
+{
+  "name": "Robin — voice-first lernen",
+  "short_name": "Robin",
+  "description": "Karten einsprechen, im richtigen Moment wiederholen. Ohne Konto, ohne Abo, ohne Werbung.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ECEFEC",
+  "theme_color": "#16704B",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
