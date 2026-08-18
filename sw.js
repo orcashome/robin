@@ -2,8 +2,12 @@
  * Zweck: Die App laeuft nach dem ersten Besuch auch ohne Netz (Auto, Bahn, Keller).
  * WICHTIG beim Neu-Deployen: CACHE-Namen hochzaehlen, sonst sehen Rueckkehrer die alte Version.
  */
-const CACHE = "robin-v54";
-const ASSETS = ["./", "./index.html", "./icon.svg", "./apple-touch-icon.png", "./icon-192.png", "./icon-512.png", "./manifest.webmanifest", "./fonts.css", "./icon-maskable.svg"];
+const CACHE = "fk-v1";
+// Wichtig: jede Datei hier MUSS existieren. addAll bricht sonst komplett ab,
+// der Service Worker installiert nicht, und die App laeuft nicht offline.
+// fonts.css ist entfallen - die runde Schrift kommt jetzt vom System.
+const ASSETS = ["./", "./index.html", "./icon.svg", "./apple-touch-icon.png",
+  "./icon-192.png", "./icon-512.png", "./icon-maskable.png", "./manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
